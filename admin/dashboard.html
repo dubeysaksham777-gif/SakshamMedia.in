@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard - NewsHub</title>
+
+<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>📰 NewsHub Admin Dashboard</h1>
+
+    <p>Welcome Admin! Manage your news portal from here.</p>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>Total News</h2>
+            <p>25</p>
+        </div>
+
+        <div class="card">
+            <h2>Categories</h2>
+            <p>5</p>
+        </div>
+
+        <div class="card">
+            <h2>Visitors</h2>
+            <p>1024</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <a href="add-news.html">
+        <button>Add News</button>
+    </a>
+
+    <button onclick="logout()">
+        Logout
+    </button>
+
+</div>
+
+<script>
+function logout(){
+    alert("Logged Out Successfully");
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>

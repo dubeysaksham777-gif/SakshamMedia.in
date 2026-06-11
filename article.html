@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Article - NewsHub</title>
+
+```
+<link rel="stylesheet" href="css/style.css">
+```
+
+</head>
+<body>
+
+```
+<!-- Header -->
+<header>
+
+    <div class="logo">
+        <h1>NewsHub</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- Article Section -->
+
+<div class="article-container">
+
+    <h1 id="title">Loading Article...</h1>
+
+    <p id="category"></p>
+
+    <hr style="margin:20px 0;">
+
+    <p id="content"></p>
+
+    <br><br>
+
+    <a href="index.html">
+        <button>← Back to Home</button>
+    </a>
+
+</div>
+
+<!-- Script -->
+
+<script>
+
+    const news =
+    JSON.parse(
+        localStorage.getItem("selectedNews")
+    );
+
+    if(news){
+
+        document.getElementById("title")
+        .innerHTML = news.title;
+
+        document.getElementById("category")
+        .innerHTML =
+        "<strong>Category:</strong> " +
+        news.category;
+
+        document.getElementById("content")
+        .innerHTML =
+        news.content;
+
+    }
+
+    else{
+
+        document.getElementById("title")
+        .innerHTML =
+        "Article Not Found";
+
+        document.getElementById("category")
+        .innerHTML = "";
+
+        document.getElementById("content")
+        .innerHTML =
+        "No article data available. Please return to the homepage and select an article.";
+
+    }
+
+</script>
+```
+
+</body>
+</html>
